@@ -1,0 +1,70 @@
+; args: [pos]
+; removes nearby (<50m) ammo, weapons and corpses
+; also removes destroyed vehicles if within 10m
+
+_posStart = _this select 0
+_typeName = ""
+
+_typeCount = count typesCleanup
+_objectsRemoved = 0
+
+_side = side player
+
+? (_side != civilian): ["Cleaning up ground ...", false, true, htGeneral, false] call funcHint
+? (_side == civilian): ["Cleaning up ground ...", false, true, htGeneral, false] call funcHint
+
+_indexPos = 0
+_countPos = 10
+
+#NextPosStart
+  _pos = _posStart
+  _typeIndex = 0
+  
+  #NextTypeStart
+    _objectName = typesCleanup select _typeIndex
+
+    #NextObject
+
+    _object = nearestObject [_pos, _objectName]
+    ? (isNull _object ): goto "NextType"
+    ? (_typeIndex > 1 && (alive _object || (_pos distance _object) > 10)): goto "NextType"
+    ? (_object == mhqWest || _object == mhqEast): goto "NextType"
+
+    ; _leader = false
+    ; { if (_object == leader _x) then { _leader = true } } foreach (groupMatrix select siWest)
+    ; { if (_object == leader _x) then { _leader = true } } foreach (groupMatrix select siEast)
+    ; ? _leader : goto "NextType"
+
+    _typeName = typeOf _object
+    _pos = getPos _object
+    
+    deleteVehicle _object
+    
+    _objectsRemoved = _objectsRemoved + 1
+    ? (_objectsRemoved >= 1000): goto "ExitDisplayLast"
+    ? ((_objectsRemoved % 100) != 0): goto "NoMessage"
+    ? (_side != civilian): [format["Removed %1 objects ...", _objectsRemoved], false, true, htGeneral, false] call funcHint
+    ? (_side == civilian): [format["Removed %1 objects ...", _objectsRemoved], false, true, htGeneral, false] call funcHint
+    #NoMessage
+    ~0.01
+    goto "NextObject"
+
+    #NextType
+    _typeIndex = _typeIndex + 1
+    ? (_typeIndex < _typeCount): goto "NextTypeStart"
+  
+  _indexPos = _indexPos + 1
+  ? (_indexPos < _countPos): goto "NextPosStart"
+
+? _objectsRemoved > 0 : goto "ExitDisplayLast"
+
+#Exit
+
+? (_side != civilian): player groupchat Format["Removed %1 objects.", _objectsRemoved]
+? (_side == civilian): player globalchat Format["Removed %1 objects.", _objectsRemoved]
+Exit
+
+#ExitDisplayLast
+? (_side != civilian): player groupchat Format["Removed %1 objects. (last type removed '%2')", _objectsRemoved, _typeName]
+? (_side == civilian): player globalchat Format["Removed %1 objects. (last type removed '%2')", _objectsRemoved, _typeName]
+Exit

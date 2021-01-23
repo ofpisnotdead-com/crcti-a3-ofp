@@ -1,0 +1,138 @@
+; args: [object, type, si, distance]
+
+_object = _this select 0
+_unit = player
+_si = playerSideIndex
+_distMax = _this select 3
+
+_isMHQ = (_object == mhqWest || _object == mhqEast)
+
+buttonPressedBuild = false
+buttonPressedPlaceBuild = false
+buttonPressedBuy = false
+
+_delay = 0.2
+
+#Init
+
+	openBuildMenu = false
+	_menuOpen = true
+
+	;Create the build menu.
+	_buildMenu = CreateDialog "BuildMenu"
+  [IDD_BuildMenu]call funcFixDialogTitleColor
+
+	ctrlSetText [IDC_TEXT_MENU_NAME, "Build Structures"]
+
+	ctrlShow [IDC_BTN_ALIGN, false]
+	ctrlShow [IDC_BTN_FLOAT, false]
+
+	? !(_isMHQ): ctrlShow [IDC_BTN_BUY_BG, false]; ctrlShow [IDC_BTN_BUY, false]; ctrlShow [IDC_TEXT_WORKERS, false]; ctrlShow[IDC_LABEL_WORKERS, false]
+
+	_index = 0
+	_count = count structDefs
+	_money = (groupMoneyMatrix select _si) select playerGroupIndex
+
+	;Add an entry onto the structure selection combobox.
+	#AddStructures
+
+		_desc = structDefs select _index
+		_name = _desc select sdName
+		_cost = _desc select sdCost
+		_sides = _desc select sdSides
+		_onlyCO = _desc select sdOnlyCO
+		_onlyMHQ = _desc select sdOnlyMHQ
+		
+		?(playerSideIndex == siwest):_model = sdObjectsWest
+		?(playerSideIndex == sieast):_model = sdObjectsEast
+				
+		_text = Format["$%1 %2", [_cost, 5] call funcPadNumber, _name]
+
+		? (_si != _sides && _sides != siBoth): goto "Skip"
+
+		? (_onlyMHQ && !_isMHQ): goto "Skip"
+		? (_onlyCO && playerGroup != (groupCommander select _si)): goto "Skip"
+
+		_id = lbAdd[IDC_LB_LIST1, _text]
+		lbSetValue [IDC_LB_LIST1, _id, _index]
+    ? !(_index in structsCritical): lbSetColor [IDC_LB_LIST1, _id, [0.5,0.5,.9,1]]
+    ? (_cost > _money): lbSetColor [IDC_LB_LIST1, _id, [.9,0.5,0.5,1]]
+		? (lastSelectedStructType == _index): lbSetCurSel [IDC_LB_LIST1, _id]
+
+		#Skip
+
+		_index = _index + 1
+		? (_index < _count):goto "AddStructures"
+
+	_type = -1
+
+#Update
+	? !(alive _object): goto "CloseDialog"
+	? !(alive _unit): goto "CloseDialog"
+	? (_unit distance _object > _distMax): goto "CloseDialog"
+  ? (_isMHQ && playerGroup != (groupCommander select _si)): goto "CloseDialog"
+  
+	;If the value is not 1 then the menu was closed with the ESC key.
+	? !(dialog): goto "CloseDialog"
+
+	_selected = lbCurSel IDC_LB_LIST1
+	? (_selected == -1): _type == -1; goto "NoStructSelected"
+	_type = lbValue[IDC_LB_LIST1, _selected]
+	
+	;_image = getText (configFile >> "CfgVehicles" >> ((((structDefs select _type) select _model)select 0) select 0) >> "picture")	
+	;?(_image == "PICTURESTATICOBJECT"): _image = "\CA\UI\DATA\marker_x_ca.paa"	
+	;?(_image == "\CA\UI\DATA\ICON_WF_BUILDING_REPAIR_CA.PAA"):_image = "\CA\UI\DATA\iconship_ca.paa"
+	;ctrlSetText [IDC_Build_Picture, _image]
+	
+	lastSelectedStructType = _type
+	_cost = (structDefs select _type) select sdCost
+	if (_type in alignTypes) then { ctrlShow [IDC_BTN_ALIGN, true] } else { ctrlShow [IDC_BTN_ALIGN, false] }
+	if (_type in structsFloat) then { ctrlShow [IDC_BTN_FLOAT, true] } else { ctrlShow [IDC_BTN_FLOAT, false] }	
+	#NoStructSelected
+
+	_money = (groupMoneyMatrix select _si) select playerGroupIndex
+	_text = format ["$%1", _money]
+	ctrlSetText [IDC_TEXT_PLAYER_MONEY, _text]
+
+	? (_si == siWest): _text = format ["Buy Worker $%1", costWorker]; _text2 = format["(%1/%2)", pvWorkersWest, maxWorkers]
+	? (_si == siEast): _text = format ["Buy Worker $%1", costWorker]; _text2 = format["(%1/%2)", pvWorkersEast, maxWorkers]
+	
+    [IDD_BuildMenu, IDC_BTN_BUY,_text] call funcSetButtonText
+    ctrlSetText [IDC_TEXT_WORKERS, _text2]
+
+    
+	if (alignWalls) then { [IDD_BuildMenu, IDC_BTN_ALIGN, "Align Walls: ON"] call funcSetButtonText } else { [IDD_BuildMenu, IDC_BTN_ALIGN, "Align Walls: OFF"] call funcSetButtonText }
+	if (SQU_FloatObj) then { [IDD_BuildMenu, IDC_BTN_FLOAT, "Float Object: ON"] call funcSetButtonText } else { [IDD_BuildMenu, IDC_BTN_FLOAT, "Float Object: OFF"] call funcSetButtonText }
+	
+	? (buttonPressedBuild):goto "BuildStructure"
+	? (buttonPressedPlaceBuild):goto "PlaceBuildStructure"
+	? (buttonPressedBuy):goto "BuyWorker"
+
+	~_delay
+	goto "Update"
+
+#BuyWorker
+	buttonPressedBuy = false
+	? (_money < costWorker): ["Not enough Money", true, false, htGeneral, false] call funcHint; goto "Update"
+	[_unit] execVM "Player\AddWorker.sqf"
+	goto "Update"
+
+#BuildStructure
+	buttonPressedBuild = false
+	? (_type == -1): ["No structure selected", true, false, htGeneral, false] call funcHint; goto "Update"
+	? (_money < _cost): ["Not enough Money", true, false, htGeneral, false] call funcHint; goto "Update"
+	_nul = [_unit, _si, _type, [], 0, alignWalls && ctrlVisible IDC_BTN_ALIGN, SQU_FloatObj && ctrlVisible IDC_BTN_FLOAT] execVM "Player\BuildStructure.sqf"
+	goto "CloseDialog"
+
+#PlaceBuildStructure
+	buttonPressedPlaceBuild = false
+	? (_type == -1): ["No structure selected", true, false, htGeneral, false] call funcHint; goto "Update"
+	? (_money < _cost): ["Not enough Money", true, false, htGeneral, false] call funcHint; goto "Update"
+	_nul = [_object, _unit, _si, _type, alignWalls && ctrlVisible IDC_BTN_ALIGN, SQU_FloatObj && ctrlVisible IDC_BTN_FLOAT, _distMax] execVM "Player\PlaceAndBuildStructure.sqf"
+	goto "CloseDialog"
+
+#CloseDialog
+	buttonPressedBuild = false
+	buttonPressedBuy = false
+	? (dialog): closeDialog 0
+	Exit

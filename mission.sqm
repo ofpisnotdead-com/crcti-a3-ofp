@@ -1,0 +1,1577 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=157;
+	};
+	class MarkerIDProvider
+	{
+		nextID=4;
+	};
+	class Camera
+	{
+		pos[]={6803.2349,606.82733,4095.6504};
+		dir[]={0.58595562,-0.56527412,0.58063334};
+		up[]={0.40153608,0.82489622,0.39788583};
+		aside[]={0.70387608,7.2875991e-008,-0.71033388};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Structures_F_Mil_Flags",
+	"A3_Modules_F",
+	"A3_Characters_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=8887996;
+class ScenarioData
+{
+	author="retro";
+};
+class Intro
+{
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		resistanceWest=0;
+		startWeather=0.39999998;
+		startWind=0.1;
+		forecastWeather=0.39999998;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Entities
+	{
+		items=41;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={10191.104,492.22668,3186.9382};
+			name="Respawn_west";
+			text="Respawn";
+			type="mil_dot";
+			colorName="ColorGreen";
+			a=0;
+			b=0;
+			id=0;
+			atlOffset=426.5502;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={11274.262,528.42529,3171.3083};
+			name="Respawn_east";
+			text="Respawn";
+			type="mil_dot";
+			colorName="ColorGreen";
+			a=0;
+			b=0;
+			id=1;
+			atlOffset=576.12402;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={9143.249,386.61856,258.95776};
+			name="rally";
+			text="Rally";
+			type="mil_join";
+			colorName="ColorRed";
+			id=2;
+			atlOffset=391.1709;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={9115.3389,393.16858,-187.55481};
+			name="CO_rally";
+			text="CO_Rally";
+			type="mil_join";
+			colorName="ColorRed";
+			a=1.5;
+			b=1.5;
+			id=3;
+			atlOffset=411.8949;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4894.8711,162.91661,7029.769};
+				angles[]={6.2785254,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="call{[this,""Montignac"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""}";
+				name="Town1";
+			};
+			id=4;
+			type="FlagPole_F";
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8663.1094,-0.21992953,-346.10388};
+			};
+			name="LocalServerObject";
+			init="gameEndType = -1; ";
+			id=54;
+			type="Logic";
+			atlOffset=31.732475;
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8441.2969,0.11776996,-397.81519};
+			};
+			init="CRCTICOOP = true;";
+			id=81;
+			type="Logic";
+			atlOffset=32.586815;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10866.577,-0.059423506,3189.7944};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Alpha Leader - West Commander";
+						isPlayable=1;
+					};
+					id=83;
+					type="B_Soldier_SL_F";
+					atlOffset=39.846165;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=82;
+			atlOffset=39.846165;
+		};
+		class Item8
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10899.05,-0.3004294,3182.3691};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Bravo Leader";
+						isPlayable=1;
+					};
+					id=85;
+					type="B_Soldier_SL_F";
+					atlOffset=39.927052;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=84;
+			atlOffset=39.927052;
+		};
+		class Item9
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10906.744,-0.16579588,3182.9236};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Charlie Leader";
+						isPlayable=1;
+					};
+					id=87;
+					type="B_Soldier_SL_F";
+					atlOffset=40.399418;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=86;
+			atlOffset=40.399418;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=10;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10865.363,-0.034413144,3156.7207};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Delta Leader";
+						isPlayable=1;
+					};
+					id=89;
+					type="B_Soldier_SL_F";
+					atlOffset=36.721035;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10867.936,-0.25018817,3149.563};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Missile Specialist [AT]";
+						isPlayable=1;
+					};
+					id=90;
+					type="B_soldier_AT_F";
+					atlOffset=35.789528;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10875.265,0.053322718,3149.4658};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman [AT]";
+						isPlayable=1;
+					};
+					id=91;
+					type="B_soldier_LAT_F";
+					atlOffset=36.278095;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10882.401,0.28847817,3149.563};
+						angles[]={0.10757912,0,6.242209};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Autorifleman";
+						isPlayable=1;
+					};
+					id=92;
+					type="B_soldier_AR_F";
+					atlOffset=36.818241;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10888.478,0.22122467,3149.3696};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Ammo Bearer";
+						isPlayable=1;
+					};
+					id=93;
+					type="B_Soldier_A_F";
+					atlOffset=36.987206;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10894.939,0.039052889,3149.3696};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Marksman";
+						isPlayable=1;
+					};
+					id=94;
+					type="B_soldier_M_F";
+					atlOffset=37.09581;
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10900.629,0.0058137029,3149.2737};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Combat Life Saver";
+						isPlayable=1;
+					};
+					id=95;
+					type="B_medic_F";
+					atlOffset=37.31068;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10910.527,0.26473343,3149.887};
+						angles[]={0.099665575,0,6.2372193};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=96;
+					type="B_Soldier_F";
+					atlOffset=38.086544;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10914.771,0.3408711,3150.2451};
+						angles[]={0.094712868,0,6.242209};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman [Light]";
+						isPlayable=1;
+					};
+					id=97;
+					type="B_Soldier_lite_F";
+					atlOffset=38.381378;
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10905.646,0.12703076,3149.2737};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Engineer";
+						isPlayable=1;
+					};
+					id=98;
+					type="B_engineer_F";
+					atlOffset=37.663006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=88;
+			atlOffset=36.721035;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10914.871,0.00077231228,3183.155};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Echo Leader";
+						isPlayable=1;
+					};
+					id=100;
+					type="B_Soldier_SL_F";
+					atlOffset=40.850471;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=99;
+			atlOffset=40.850471;
+		};
+		class Item12
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10918.912,-0.035196155,3183.071};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Foxtrot Leader";
+						isPlayable=1;
+					};
+					id=102;
+					type="B_Soldier_SL_F";
+					atlOffset=40.93615;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=101;
+			atlOffset=40.93615;
+		};
+		class Item13
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10924.938,-0.20315589,3183.2654};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Golf Leader";
+						isPlayable=1;
+					};
+					id=104;
+					type="B_Soldier_SL_F";
+					atlOffset=40.974052;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=103;
+			atlOffset=40.974052;
+		};
+		class Item14
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10812.104,-0.33150166,3506.4534};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Alpha Leader - East Commander";
+						isPlayable=1;
+					};
+					id=106;
+					type="O_Soldier_SL_F";
+					atlOffset=48.947193;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=105;
+			atlOffset=48.947193;
+		};
+		class Item15
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10825.401,-0.059515417,3492.0498};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Bravo Leader";
+						isPlayable=1;
+					};
+					id=108;
+					type="O_Soldier_SL_F";
+					atlOffset=49.213165;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=107;
+			atlOffset=49.213165;
+		};
+		class Item16
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10829.288,-0.21651709,3491.9834};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Charlie Leader";
+						isPlayable=1;
+					};
+					id=110;
+					type="O_Soldier_SL_F";
+					atlOffset=49.067558;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=109;
+			atlOffset=49.067558;
+		};
+		class Item17
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=10;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10814.538,0.19946158,3469.7896};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Delta Leader";
+						isPlayable=1;
+					};
+					id=112;
+					type="O_Soldier_SL_F";
+					atlOffset=49.350452;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10817.963,0.0058127493,3467.1631};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Missile Specialist [AT]";
+						isPlayable=1;
+					};
+					id=113;
+					type="O_Soldier_AT_F";
+					atlOffset=49.147903;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10821.412,-0.073480532,3467.2051};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman [AT]";
+						isPlayable=1;
+					};
+					id=114;
+					type="O_Soldier_LAT_F";
+					atlOffset=49.075756;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10825.117,-0.049307354,3467.2473};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Autorifleman";
+						isPlayable=1;
+					};
+					id=115;
+					type="O_Soldier_AR_F";
+					atlOffset=49.107708;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10828.481,0.042965587,3467.3333};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Ammo Bearer";
+						isPlayable=1;
+					};
+					id=116;
+					type="O_Soldier_A_F";
+					atlOffset=49.21059;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10831.507,0.1332669,3467.4192};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Marksman";
+						isPlayable=1;
+					};
+					id=117;
+					type="O_soldier_M_F";
+					atlOffset=49.310482;
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10834.956,0.1830212,3467.5032};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Combat Life Saver";
+						isPlayable=1;
+					};
+					id=118;
+					type="O_medic_F";
+					atlOffset=49.373497;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10838.445,0.13236502,3467.8462};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Engineer";
+						isPlayable=1;
+					};
+					id=119;
+					type="O_engineer_F";
+					atlOffset=49.339199;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10842.109,-0.016589716,3467.8018};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman";
+						isPlayable=1;
+					};
+					id=120;
+					type="O_Soldier_F";
+					atlOffset=49.20459;
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10845.218,-0.17615241,3467.8447};
+					};
+					side="East";
+					class Attributes
+					{
+						skill=1;
+						init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+						description="Rifleman [Light]";
+						isPlayable=1;
+					};
+					id=121;
+					type="O_Soldier_lite_F";
+					atlOffset=49.055714;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=111;
+			atlOffset=49.350452;
+		};
+		class Item18
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10835.954,-0.37777752,3492.0078};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Echo Leader";
+						isPlayable=1;
+					};
+					id=123;
+					type="O_Soldier_SL_F";
+					atlOffset=48.923481;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=122;
+			atlOffset=48.923481;
+		};
+		class Item19
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10839.906,-0.2896862,3492.3164};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Foxtrot Leader";
+						isPlayable=1;
+					};
+					id=125;
+					type="O_Soldier_SL_F";
+					atlOffset=49.022804;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=124;
+			atlOffset=49.022804;
+		};
+		class Item20
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10843.222,-0.12870686,3491.9326};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Golf Leader";
+						isPlayable=1;
+					};
+					id=127;
+					type="O_Soldier_SL_F";
+					atlOffset=49.192577;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=126;
+			atlOffset=49.192577;
+		};
+		class Item21
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10846.71,0.036939934,3492.0674};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Hotel Leader";
+						isPlayable=1;
+					};
+					id=129;
+					type="O_Soldier_SL_F";
+					atlOffset=49.369091;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=128;
+			atlOffset=49.369091;
+		};
+		class Item22
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10931.785,-0.33235389,3183.363};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Hotel Leader";
+						isPlayable=1;
+					};
+					id=131;
+					type="B_Soldier_SL_F";
+					atlOffset=41.0956;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=130;
+			atlOffset=41.0956;
+		};
+		class Item23
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10834.756,-0.20009583,3498.9878};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Juliett Leader";
+						isPlayable=1;
+					};
+					id=133;
+					type="O_Soldier_SL_F";
+					atlOffset=49.119705;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=132;
+			atlOffset=49.119705;
+		};
+		class Item24
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10838.708,-0.26649159,3499.2964};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="India Leader";
+						isPlayable=1;
+					};
+					id=135;
+					type="O_Soldier_SL_F";
+					atlOffset=49.063347;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=134;
+			atlOffset=49.063347;
+		};
+		class Item25
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10842.023,-0.22598818,3498.9126};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Kilo Leader";
+						isPlayable=1;
+					};
+					id=137;
+					type="O_Soldier_SL_F";
+					atlOffset=49.11264;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=136;
+			atlOffset=49.11264;
+		};
+		class Item26
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10845.512,-0.077195108,3499.0474};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Lima Leader";
+						isPlayable=1;
+					};
+					id=139;
+					type="O_Soldier_SL_F";
+					atlOffset=49.272305;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=138;
+			atlOffset=49.272305;
+		};
+		class Item27
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10884.547,0.095824726,3190.0793};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Juliett Leader";
+						isPlayable=1;
+					};
+					id=141;
+					type="B_Soldier_SL_F";
+					atlOffset=40.459686;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=140;
+			atlOffset=40.459686;
+		};
+		class Item28
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10893.112,-0.035591632,3190.2791};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="India Leader";
+						isPlayable=1;
+					};
+					id=143;
+					type="B_Soldier_SL_F";
+					atlOffset=40.600857;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=142;
+			atlOffset=40.600857;
+		};
+		class Item29
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10903.098,-0.37990907,3190.3315};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Kilo Leader";
+						isPlayable=1;
+					};
+					id=145;
+					type="B_Soldier_SL_F";
+					atlOffset=40.569721;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=144;
+			atlOffset=40.569721;
+		};
+		class Item30
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10909.945,-0.33030075,3190.4292};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=1;
+						rank="CAPTAIN";
+						init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+						description="Lima Leader";
+						isPlayable=1;
+					};
+					id=147;
+					type="B_Soldier_SL_F";
+					atlOffset=40.856991;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=146;
+			atlOffset=40.856991;
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10447.155,0.36357391,3154.7749};
+			};
+			name="HC";
+			init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+			isPlayable=1;
+			id=148;
+			type="HeadlessClient_F";
+			atlOffset=21.187223;
+		};
+		class Item32
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10483.586,0.082427099,3157.811};
+			};
+			name="HC_1";
+			init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+			isPlayable=1;
+			id=149;
+			type="HeadlessClient_F";
+			atlOffset=25.824827;
+		};
+		class Item33
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10486.897,0.036653697,3135.4561};
+			};
+			name="HC_2";
+			init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+			isPlayable=1;
+			id=150;
+			type="HeadlessClient_F";
+			atlOffset=21.583447;
+		};
+		class Item34
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10453.503,-0.13108681,3134.0757};
+			};
+			name="HC_3";
+			init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+			isPlayable=1;
+			id=151;
+			type="HeadlessClient_F";
+			atlOffset=17.417036;
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2013.1545,115.61763,5508.9707};
+				angles[]={6.2242584,0,0.04496545};
+			};
+			init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+			id=80;
+			type="Logic";
+		};
+		class Item36
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2618.417,87.751541,5427.002};
+				angles[]={0.0019547688,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="call{[this,""Le Moule"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""}";
+				name="Town2";
+			};
+			id=152;
+			type="FlagPole_F";
+		};
+		class Item37
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5073.522,20.3449,3982.9121};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="call{[this,""Morton"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""}";
+				name="Town3";
+			};
+			id=153;
+			type="FlagPole_F";
+		};
+		class Item38
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7526.605,121.65083,4722.3789};
+				angles[]={0.014940019,0,6.2720151};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="call{[this,""Levie"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""}";
+				name="Town4";
+			};
+			id=154;
+			type="FlagPole_F";
+		};
+		class Item39
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5280.1299,65.812744,5360.8931};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.2;
+				init="call{[this,""Figari"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""}";
+				name="Town5";
+			};
+			id=155;
+			type="FlagPole_F";
+		};
+		class Item40
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7529.9316,153.97589,4129.0962};
+			};
+			init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+			id=156;
+			type="Logic";
+		};
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};

@@ -1,0 +1,1 @@
+[] exec "Player\OpenOptionsMenu.sqs";

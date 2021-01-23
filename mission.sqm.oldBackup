@@ -1,0 +1,2059 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"cacharacters2",
+		"ca_modules_functions",
+		"camisc3",
+		"takistan",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f_beta",
+		"A3_Characters_F_OPFOR",
+		"A3_Structures_F_Mil_Flags",
+		"A3_Modules_F",
+		"a3_characters_f",
+		"aia_takistan_config",
+		"cup_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Modules_F",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Characters_F_OPFOR",
+		"A3_Structures_F_Mil_Flags",
+		"cup_takistan_config"
+	};
+	randomSeed=5363795;
+	class Intel
+	{
+		briefingName=$STR_MISSION_NAME_COOP;
+		resistanceWest=0;
+		startWeather=0.39999998;
+		startWind=0.1;
+		forecastWeather=0.39999998;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Groups
+	{
+		items=56;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8663.1094,422.37131,-346.10388};
+					special="NONE";
+					id=0;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.2;
+					text="LocalServerObject";
+					init="gameEndType = -1; ";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4202.8032,394.83057,1837.9686};
+					id=1;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9541.5967,238.29234,9148.2373};
+					id=2;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7760.7031,162.67337,12068.944};
+					id=3;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8873.3682,260.96323,11928.993};
+					id=4;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item5
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10836.577,205.08162,12037.729};
+					id=5;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11396.735,505.30139,7033.7783};
+					id=6;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9617.9512,503.79114,4165.8359};
+					id=7;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item8
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8729.5293,429.85309,3209.1279};
+					id=8;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item9
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6474.2993,609.3562,3478.1396};
+					id=9;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5442.6055,422.20181,-39.266846};
+					id=10;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2042.312,299.0715,2987.4109};
+					id=11;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2854.2922,261.82059,8166.7832};
+					id=12;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2719.6572,463.47931,6511.1709};
+					id=13;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item14
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7360.0977,322.55524,6977.4766};
+					id=14;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4245.3306,164.16586,5753.1655};
+					id=15;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item16
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1315.4106,472.30069,10277.27};
+					id=16;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item17
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2931.2959,109.00394,11644.304};
+					id=17;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item18
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12587.014,435.89896,8880.9385};
+					id=18;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item19
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11000.519,194.87343,9661.3906};
+					id=19;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item20
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10340.229,502.74207,7720.624};
+					id=20;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item21
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4774.3145,252.23709,8307.6006};
+					id=21;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item22
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9076.4629,543.73761,1050.7773};
+					id=22;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf"";[this, ""AIRFIELD""] call compile preProcessFile ""Common\AddStartLocation.sqf"";[this, ""EAST""] call compile preProcessFile ""Common\AddStartLocation.sqf"";";
+				};
+			};
+		};
+		class Item23
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8034.3145,147.72099,10057.837};
+					id=23;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item24
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2813.6953,248.60089,9028.541};
+					id=24;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item25
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4492.7065,79.463081,10451.6};
+					id=25;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf"";[this, ""AIRFIELD""] call compile preProcessFile ""Common\AddStartLocation.sqf"";[this, ""WEST""] call compile preProcessFile ""Common\AddStartLocation.sqf"";";
+				};
+			};
+		};
+		class Item26
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7332.8135,344.2453,4805.4312};
+					id=26;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""RANDOM""] call compile preProcessFile ""Common\AddStartLocation.sqf""";
+				};
+			};
+		};
+		class Item27
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8441.2969,412.26895,-397.81519};
+					id=27;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					init="CRCTICOOP = true;";
+				};
+			};
+		};
+		class Item28
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10866.577,587.87708,3189.7444};
+					special="NONE";
+					id=28;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Alpha Leader - West Commander";
+				};
+			};
+		};
+		class Item29
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10899.05,585.07928,3182.3191};
+					special="NONE";
+					id=29;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Bravo Leader";
+				};
+			};
+		};
+		class Item30
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10906.744,585.43188,3182.8735};
+					special="NONE";
+					id=30;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Charlie Leader";
+				};
+			};
+		};
+		class Item31
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={10865.363,581.13086,3156.6707};
+					special="NONE";
+					id=31;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Delta Leader";
+				};
+				class Item1
+				{
+					position[]={10867.936,578.99371,3149.5129};
+					special="NONE";
+					id=32;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Missile Specialist [AT]";
+				};
+				class Item2
+				{
+					position[]={10875.265,578.24139,3149.4158};
+					special="NONE";
+					id=33;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman [AT]";
+				};
+				class Item3
+				{
+					position[]={10882.401,577.6803,3149.5129};
+					special="NONE";
+					id=34;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Autorifleman";
+				};
+				class Item4
+				{
+					position[]={10888.478,577.69177,3149.3196};
+					special="NONE";
+					id=35;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Ammo Bearer";
+				};
+				class Item5
+				{
+					position[]={10894.939,577.91211,3149.3196};
+					special="NONE";
+					id=36;
+					side="WEST";
+					vehicle="B_soldier_M_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Marksman";
+				};
+				class Item6
+				{
+					position[]={10900.629,578.23505,3149.2236};
+					special="NONE";
+					id=37;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Combat Life Saver";
+				};
+				class Item7
+				{
+					position[]={10910.527,578.98773,3149.8369};
+					special="NONE";
+					id=38;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman";
+				};
+				class Item8
+				{
+					position[]={10914.771,579.30713,3150.1951};
+					special="NONE";
+					id=39;
+					side="WEST";
+					vehicle="B_Soldier_lite_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman [Light]";
+				};
+				class Item9
+				{
+					position[]={10905.646,578.55212,3149.2236};
+					special="NONE";
+					id=40;
+					side="WEST";
+					vehicle="B_engineer_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 0] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Engineer";
+				};
+			};
+		};
+		class Item32
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10914.871,585.71875,3183.105};
+					special="NONE";
+					id=41;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Echo Leader";
+				};
+			};
+		};
+		class Item33
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10918.912,585.763,3183.021};
+					special="NONE";
+					id=42;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Foxtrot Leader";
+				};
+			};
+		};
+		class Item34
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10924.938,585.85455,3183.2153};
+					special="NONE";
+					id=43;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Golf Leader";
+				};
+			};
+		};
+		class Item35
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10812.104,699.63049,3506.4033};
+					special="NONE";
+					id=44;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Alpha Leader - East Commander";
+				};
+			};
+		};
+		class Item36
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10825.401,693.16632,3491.9998};
+					special="NONE";
+					id=45;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Bravo Leader";
+				};
+			};
+		};
+		class Item37
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10829.288,694.31317,3491.9333};
+					special="NONE";
+					id=46;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Charlie Leader";
+				};
+			};
+		};
+		class Item38
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={10814.538,676.96063,3469.7395};
+					special="NONE";
+					id=47;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Delta Leader";
+				};
+				class Item1
+				{
+					position[]={10817.963,676.03613,3467.113};
+					special="NONE";
+					id=48;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Missile Specialist [AT]";
+				};
+				class Item2
+				{
+					position[]={10821.412,677.0022,3467.155};
+					special="NONE";
+					id=49;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman [AT]";
+				};
+				class Item3
+				{
+					position[]={10825.117,678.09747,3467.1973};
+					special="NONE";
+					id=50;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Autorifleman";
+				};
+				class Item4
+				{
+					position[]={10828.481,679.21277,3467.2832};
+					special="NONE";
+					id=51;
+					side="EAST";
+					vehicle="O_Soldier_A_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Ammo Bearer";
+				};
+				class Item5
+				{
+					position[]={10831.507,680.21155,3467.3691};
+					special="NONE";
+					id=52;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Marksman";
+				};
+				class Item6
+				{
+					position[]={10834.956,681.20563,3467.4531};
+					special="NONE";
+					id=53;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Combat Life Saver";
+				};
+				class Item7
+				{
+					position[]={10838.445,682.39795,3467.7961};
+					special="NONE";
+					id=54;
+					side="EAST";
+					vehicle="O_engineer_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Engineer";
+				};
+				class Item8
+				{
+					position[]={10842.109,683.45062,3467.7517};
+					special="NONE";
+					id=55;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman";
+				};
+				class Item9
+				{
+					position[]={10845.218,684.41962,3467.7947};
+					special="NONE";
+					id=56;
+					side="EAST";
+					vehicle="O_Soldier_lite_F";
+					player="PLAY CDG";
+					skill=1;
+					init="[this, 1] execVM ""Common\PlaceGroupMember.sqf""";
+					description="Rifleman [Light]";
+				};
+			};
+		};
+		class Item39
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10835.954,696.19873,3491.9578};
+					special="NONE";
+					id=57;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Echo Leader";
+				};
+			};
+		};
+		class Item40
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10839.906,697.46588,3492.2664};
+					special="NONE";
+					id=58;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Foxtrot Leader";
+				};
+			};
+		};
+		class Item41
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10843.222,698.14172,3491.8826};
+					special="NONE";
+					id=59;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Golf Leader";
+				};
+			};
+		};
+		class Item42
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10846.71,699.17542,3492.0173};
+					special="NONE";
+					id=60;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Hotel Leader";
+				};
+			};
+		};
+		class Item43
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10931.785,585.91034,3183.313};
+					special="NONE";
+					id=61;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Hotel Leader";
+				};
+			};
+		};
+		class Item44
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10834.756,700.0788,3498.9377};
+					special="NONE";
+					id=62;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Juliett Leader";
+				};
+			};
+		};
+		class Item45
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10838.708,701.33624,3499.2463};
+					special="NONE";
+					id=63;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="India Leader";
+				};
+			};
+		};
+		class Item46
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10842.023,702.00781,3498.8625};
+					special="NONE";
+					id=64;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Kilo Leader";
+				};
+			};
+		};
+		class Item47
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10845.512,703.03864,3498.9973};
+					special="NONE";
+					id=65;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Lima Leader";
+				};
+			};
+		};
+		class Item48
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10884.547,586.74353,3190.0293};
+					special="NONE";
+					id=66;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Juliett Leader";
+				};
+			};
+		};
+		class Item49
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10893.112,586.50098,3190.229};
+					special="NONE";
+					id=67;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="India Leader";
+				};
+			};
+		};
+		class Item50
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10903.098,586.7713,3190.2815};
+					special="NONE";
+					id=68;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Kilo Leader";
+				};
+			};
+		};
+		class Item51
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10909.945,586.99127,3190.3792};
+					special="NONE";
+					id=69;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=1;
+					init="[group this] call compile preProcessFile ""Common\AddGroup.sqf""";
+					description="Lima Leader";
+				};
+			};
+		};
+		class Item52
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10447.155,485.37997,3154.7749};
+					id=70;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="HC";
+					init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+				};
+			};
+		};
+		class Item53
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10483.586,488.45105,3157.811};
+					id=71;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="HC_1";
+					init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+				};
+			};
+		};
+		class Item54
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10486.897,479.7626,3135.4561};
+					id=72;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="HC_2";
+					init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+				};
+			};
+		};
+		class Item55
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10453.503,476.74713,3134.0757};
+					id=73;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="HC_3";
+					init="if ( isNil ""HeadLessClients"" ) then { HeadLessClients=[[this,[]]]; } else { HeadLessClients=HeadLessClients+[[this,[]]]; };";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=50;
+		class Item0
+		{
+			position[]={4109.8374,23.49119,11789.442};
+			special="NONE";
+			id=74;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town1";
+			init="[this,""Shamali"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item1
+		{
+			position[]={1875.3971,145.88705,11962.556};
+			special="NONE";
+			id=75;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town2";
+			init="[this,""Nur"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item2
+		{
+			position[]={3092.3904,61.55695,9973.3545};
+			special="NONE";
+			id=76;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town3";
+			init="[this,""Nagara"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item3
+		{
+			position[]={6257.4795,59.585709,11218.156};
+			special="NONE";
+			id=77;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town4";
+			init="[this,""Rasman"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item4
+		{
+			position[]={5875.7524,83.040001,11383.731};
+			special="NONE";
+			id=78;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town5";
+			init="[this,""Military Base"",400,2,15,5] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item5
+		{
+			position[]={612.47357,242.26143,2838.2952};
+			special="NONE";
+			id=79;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town6";
+			init="[this,""Chaman"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item6
+		{
+			position[]={8266.0254,235.01495,11150.744};
+			special="NONE";
+			id=80;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town7";
+			init="[this,""Par-e Siah Oilfield"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item7
+		{
+			position[]={3643.5984,152.19498,8593.3359};
+			special="NONE";
+			id=81;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town8";
+			init="[this,""Gospandi"",400,2,10,3] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item8
+		{
+			position[]={5280.7612,146.13823,6190.5522};
+			special="NONE";
+			id=82;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town9";
+			init="[this,""Feruz Abad"",400,2,10,3] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item9
+		{
+			position[]={5606.6997,81.919998,8920.9102};
+			special="NONE";
+			id=83;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town10";
+			init="[this,""Bastam"",400,2,10,3] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item10
+		{
+			position[]={5943.7739,66.808632,10426.774};
+			special="NONE";
+			id=84;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town11";
+			init="[this,""Rasman South"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item11
+		{
+			position[]={2019.0627,274.99426,7659.2622};
+			special="NONE";
+			id=85;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town12";
+			init="[this,""Mulladost"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item12
+		{
+			position[]={9853.7461,116.70846,11511.885};
+			special="NONE";
+			id=86;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town13";
+			init="[this,""Zavarak"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item13
+		{
+			position[]={1557.2826,232.37085,5710.5801};
+			special="NONE";
+			id=87;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town14";
+			init="[this,""Khushab"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item14
+		{
+			position[]={6555.4951,344.58511,2087.9937};
+			special="NONE";
+			id=88;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town15";
+			init="[this,""Sultansafe"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item15
+		{
+			position[]={6003.0859,123.42941,7203.0566};
+			special="NONE";
+			id=89;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town16";
+			init="[this,""Falar"",400,2,10,3] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item16
+		{
+			position[]={11628.377,195.44453,10174.403};
+			special="NONE";
+			id=90;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town17";
+			init="[this,""Pampa"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item17
+		{
+			position[]={2622.0608,197.24519,5115.2241};
+			special="NONE";
+			id=91;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town18";
+			init="[this,""Jalivur"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item18
+		{
+			position[]={1425.6523,231.13098,3633.2781};
+			special="NONE";
+			id=92;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town19";
+			init="[this,""Shukurkalay"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item19
+		{
+			position[]={2077.1929,361.92056,337.58679};
+			special="NONE";
+			id=93;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town20";
+			init="[this,""Landay"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item20
+		{
+			position[]={3700.4465,230.72745,4377.0708};
+			special="NONE";
+			id=94;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town21";
+			init="[this,""Sakhe"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item21
+		{
+			position[]={8122.9307,296.04001,1995.0199};
+			special="NONE";
+			id=95;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town22";
+			init="[this,""Airfield"",400,2,15,4] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item22
+		{
+			position[]={5316.0889,236.68564,4768.3384};
+			special="NONE";
+			id=96;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town23";
+			init="[this,""Kakaru"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item23
+		{
+			position[]={3567.0562,362.34659,1228.9766};
+			special="NONE";
+			id=97;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town24";
+			init="[this,""Ahmaday"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item24
+		{
+			position[]={6043.9048,300.62906,1226.442};
+			special="NONE";
+			id=98;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town25";
+			init="[this,""Huzrutimam"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item25
+		{
+			position[]={4650.1309,317.64999,704.11426};
+			special="NONE";
+			id=99;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town26";
+			init="[this,""Chak Chak"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item26
+		{
+			position[]={8226.751,176.19388,7786.6992};
+			special="NONE";
+			id=100;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town27";
+			init="[this,""Imarat"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item27
+		{
+			position[]={6072.4497,304.22699,5614.1836};
+			special="NONE";
+			id=101;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town28";
+			init="[this,""Anar"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item28
+		{
+			position[]={8891.3633,266.21017,5324.3442};
+			special="NONE";
+			id=102;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town29";
+			init="[this,""Timurkalay"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item29
+		{
+			position[]={9228.667,337.44128,1872.7506};
+			special="NONE";
+			id=103;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town30";
+			init="[this,""Jaza"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item30
+		{
+			position[]={10237.438,353.29291,2382.7314};
+			special="NONE";
+			id=104;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town31";
+			init="[this,""Chardarakht"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item31
+		{
+			position[]={8534.9111,308.70834,2467.063};
+			special="NONE";
+			id=105;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town32";
+			init="[this,""Loy Manara"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item32
+		{
+			position[]={9104.0488,202.71875,6752.2021};
+			special="NONE";
+			id=106;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town33";
+			init="[this,""Garmarud"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item33
+		{
+			position[]={5249.8066,496.36447,3685.2625};
+			special="NONE";
+			id=107;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town34";
+			init="[this,""Darbang Pass"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item34
+		{
+			position[]={7081.4131,281.19135,1057.4822};
+			special="NONE";
+			id=108;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town35";
+			init="[this,""Loy Manara Oilfield"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item35
+		{
+			position[]={11876.466,373.55991,2625.8696};
+			special="NONE";
+			id=109;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town36";
+			init="[this,""Hazar Bagh"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item36
+		{
+			position[]={9349.0986,400.86728,4620.665};
+			special="NONE";
+			id=110;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town37";
+			init="[this,""Naran Darre Pass"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item37
+		{
+			position[]={6752.8901,121.22607,8949.626};
+			special="NONE";
+			id=111;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town38";
+			init="[this,""Bastam East"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item38
+		{
+			position[]={4005.2361,538.75909,6912.1714};
+			special="NONE";
+			id=112;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town39";
+			init="[this,""Sanginakt"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item39
+		{
+			position[]={10739.077,275.91052,6308.3071};
+			special="NONE";
+			id=113;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town40";
+			init="[this,""Garmsar"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item40
+		{
+			position[]={7907.3535,566.04944,6167.2539};
+			special="NONE";
+			id=114;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town41";
+			init="[this,""Gur Dur"",400,2,10,3] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item41
+		{
+			position[]={11526.863,269.65945,8350.1924};
+			special="NONE";
+			id=115;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town42";
+			init="[this,""Ravanay"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item42
+		{
+			position[]={3668.1079,81.747459,11078.984};
+			special="NONE";
+			id=116;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town43";
+			init="[this,""Nagara-1 Oilfield"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item43
+		{
+			position[]={8069.4224,147.22887,9181.3623};
+			special="NONE";
+			id=117;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town44";
+			init="[this,""Nar"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item44
+		{
+			position[]={9355.418,164.63695,10010.843};
+			special="NONE";
+			id=118;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town45";
+			init="[this,""Sagram"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item45
+		{
+			position[]={12323.933,113.40934,11169.52};
+			special="NONE";
+			id=119;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town46";
+			init="[this,""Karachinar North"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item46
+		{
+			position[]={4026.8738,492.41196,3137.9465};
+			special="NONE";
+			id=120;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town47";
+			init="[this,""Sar-e Sang Pass"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item47
+		{
+			position[]={4686.8037,133.11627,9494.0381};
+			special="NONE";
+			id=121;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town48";
+			init="[this,""Lalezar"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item48
+		{
+			position[]={6804.7158,43.18,12243.975};
+			special="NONE";
+			id=122;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town49";
+			init="[this,""Safid Ab"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+		class Item49
+		{
+			position[]={12274.428,146.6778,10440.338};
+			special="NONE";
+			id=123;
+			side="EMPTY";
+			vehicle="FlagPole_F";
+			skill=0.2;
+			text="Town50";
+			init="[this,""Karachinar"",400,2,10,2] call compile preProcessFile ""Common\AddTown.sqf""";
+		};
+	};
+	class Markers
+	{
+		items=4;
+		class Item0
+		{
+			position[]={10191.104,492.22668,3186.9382};
+			name="Respawn_west";
+			text="Respawn";
+			type="mil_dot";
+			colorName="ColorGreen";
+			a=0;
+			b=0;
+		};
+		class Item1
+		{
+			position[]={11274.262,528.42529,3171.3083};
+			name="Respawn_east";
+			text="Respawn";
+			type="mil_dot";
+			colorName="ColorGreen";
+			a=0;
+			b=0;
+		};
+		class Item2
+		{
+			position[]={9143.249,386.61856,258.95776};
+			name="rally";
+			text="Rally";
+			type="mil_join";
+			colorName="ColorRed";
+		};
+		class Item3
+		{
+			position[]={9115.3389,393.16858,-187.55481};
+			name="CO_rally";
+			text="CO_Rally";
+			type="mil_join";
+			colorName="ColorRed";
+			a=1.5;
+			b=1.5;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"takistan",
+		"aia_takistan_config",
+		"cup_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"cup_takistan_config"
+	};
+	randomSeed=6583861;
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"takistan",
+		"aia_takistan_config",
+		"cup_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"cup_takistan_config"
+	};
+	randomSeed=5843655;
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"takistan",
+		"aia_takistan_config",
+		"cup_takistan_config"
+	};
+	addOnsAuto[]=
+	{
+		"cup_takistan_config"
+	};
+	randomSeed=7347467;
+	class Intel
+	{
+		startWeather=0.40000001;
+		startWind=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};

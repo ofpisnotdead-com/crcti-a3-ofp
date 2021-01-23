@@ -1,0 +1,82 @@
+; args: [tug, tugslot, tugType]
+
+_tug = _this select 0
+_tugslot = _this select 1
+_tugType = _this select 2
+
+_allowed = []
+_distMax = 75
+? (_tugType == ttHeli): _distMax = 75; _allowed = [stLight, stHeavy, stAir,stMarina, stPrebuiltLight, stPrebuiltHeavy, stPrebuiltAir, stPrebuiltMarina]
+? (_tugType == ttBoat): _distMax = 50; _allowed = [stLight, stHeavy, stAir,stPrebuiltLight, stPrebuiltHeavy, stPrebuiltAir]
+? (_tugType == ttTruck): _distMax = 20; _allowed = [stLight, stMarina, stPrebuiltLight, stPrebuiltMarina]
+? (_tugType == ttAPC): _distMax = 20; _allowed = [stLight, stAir,stMarina, stPrebuiltLight, stPrebuiltAir, stPrebuiltMarina]
+
+_vehicles = [getPos _tug, _distMax, [siWest, siEast, siRes, siCiv], [], [_tug]] call funcGetNearbyVehicles
+{ if ( !(((unitDefs select (_x select 1)) select udFactoryType) in _allowed)) then { _vehicles set[_forEachIndex, objNull]; }; }forEach _vehicles
+_vehicles = _vehicles - [objNull]
+? ((count _vehicles) == 0): ["No nearby attachable Vehicles", true, false, htGeneral, false] call funcHint; Exit
+
+_dlg = createDialog "NearbyVehiclesDialog"
+[IDD_NearbyVehiclesDialog]call funcFixDialogTitleColor
+
+_idcVehicles = IDC_LB_VEHICLES
+lbClear _idcVehicles
+
+btnAction = false
+
+[IDD_NearbyVehiclesDialog, IDC_BTN_ACTION, "Attach Vehicle"] call funcSetButtonText
+
+{ _text = format["%1", (unitDefs select (_x select 1)) select udName]; _id = lbAdd [_idcVehicles, _text]; _image = getText (configFile >> "CfgVehicles" >> ((unitDefs select (_x select 1)) select udModel) >> "picture"); lbSetPicture [_idcVehicles, _id, _image] } foreach _vehicles
+lbSetCurSel [_idcVehicles, 0]
+
+#Update
+
+? !(dialog):Exit
+? !(alive _tug): closeDialog 0; Exit
+
+? (btnAction): btnAction=false; goto "AttachVehicle"
+
+~0.2
+goto "Update"
+
+#AttachVehicle
+	_sel = lbCurSel _idcVehicles
+	if(_tugType == ttHeli)then{if((getPos _tug select 2)<10)then{["Chopper too Low\n10m to 75", true, false, htGeneral, false] call funcHint; goto "Update"}}
+	if(_tugType == ttHeli)then{if((getPos _tug select 2)>75)then{["Chopper too High\n10m to 75", true, false, htGeneral, false] call funcHint; goto "Update"}}	
+	? (_sel == -1): ["No vehicle selected", true, false, htGeneral, false] call funcHint; goto "Update"
+
+	_vehicle = (_vehicles select _sel) select 0
+	_type = (_vehicles select _sel) select 1
+
+	_factoryType = (unitDefs select _type) select udFactoryType
+	 
+	? !(_factoryType in _allowed): ["Vehicle too heavy", true, false, htGeneral, false] call funcHint; goto "Update"
+	? (_vehicle call funcLocked): ["Vehicle Locked\nVehicle must be unlocked", true, false, htGeneral, false] call funcHint; goto "Update"
+	? !(alive _vehicle): ["Vehicle destroyed", true, false, htGeneral, false] call funcHint; goto "Update"
+	
+	_vehicleAttached = false
+	
+	_index = 0
+	_count = count vehicleAttached
+	? (_count == 0): goto "NoneAttached"
+	#CheckAttached
+		_entry = vehicleAttached select _index
+		_tug2 = _entry select tsTug
+		_tugged = (_entry select tsTugged) - [objNull]
+
+		? (_vehicle == _tug2 && (count _tugged) > 0): _vehicleAttached = true
+		? (_vehicle in _tugged): _vehicleAttached = true
+
+		_index = _index + 1
+		? (_index < _count && !_vehicleAttached): goto "CheckAttached"
+	#NoneAttached
+
+	? (_vehicleAttached): ["Vehicle currently attached", true, false, htGeneral, false] call funcHint; goto "Update"
+
+	? ((_vehicle distance _tug) > _distMax): ["Vehicle out of attach range", true, false, htGeneral, false] call funcHint; goto "Update"
+
+	pvVehicleAttached = [_vehicle, _tug, _tugslot, _tugtype, playerGroupIndex, playerSideIndex]
+	[pvVehicleAttached] spawn MsgVehicleAttached 
+	PublicVariable "pvVehicleAttached"
+
+	closeDialog 0

@@ -1,0 +1,134 @@
+_timeLeft = playerRespawnTime;
+
+_menu = createDialog "RespawnMenu"
+[IDD_RespawnMenu] call funcFixDialogTitleColor
+
+_idc = IDC+0
+_delay = 0.2
+
+#Init
+
+	;? (respawnType == 10): respawnObject = mhq
+
+	buttonPressedSetRespawnType = -1
+
+	_structLists = []
+
+	_index = 0
+	_count = count structsRespawn
+	#InitStructs
+		_structs = [playerSideIndex, structsRespawn select _index] call funcGetWorkingStructures
+		_structLists set [_index, _structs]
+
+		if (count _structs > 0) then { ctrlEnable [IDC_BTN_RESPAWN_STRUCT+_index, true] } else { ctrlEnable [IDC_BTN_RESPAWN_STRUCT+_index, false] }
+		_name = (structDefs select (structsRespawn select _index)) select sdName;
+		? (count _structs > 1): _name = format ["%1 (%2)", _name, count _structs]
+		[IDD_RespawnMenu, IDC_BTN_RESPAWN_STRUCT+_index, _name] call funcSetButtonText
+
+		if (count _structs > 0) then { ctrlShow [IDC_CB_RESPAWN_STRUCT+_index, true] } else { ctrlShow [IDC_CB_RESPAWN_STRUCT+_index, false] }
+		{ _pos = getPos _x; _posInfo = _pos call funcCalcTownDirDistFromPos; _textPos = format ["%1 %2 %3", _posInfo select 0, _posInfo select 1, _posInfo select 2]; lbAdd [IDC_CB_RESPAWN_STRUCT+_index, _textPos] } foreach _structs
+		
+		_selectedIndex = [respawnObject, _structs] call funcGetIndex
+		if (_selectedIndex >= 0) then { lbSetCurSel [IDC_CB_RESPAWN_STRUCT+_index, _selectedIndex] } else { lbSetCurSel [IDC_CB_RESPAWN_STRUCT+_index, 0] }
+
+		_index = _index + 1
+		? (_index < _count): goto "InitStructs"
+	
+	_index = count structsRespawn
+	_count = 7
+	#HideStructRespawns
+		? (_index < _count): ctrlShow [IDC_BTN_RESPAWN_STRUCT+_index, false]; ctrlShow [IDC_CB_RESPAWN_STRUCT+_index, false]; _index = _index + 1; goto "HideStructRespawns"
+
+
+#Update
+
+	? (respawnType == 10): ctrlSetText [IDC_TEXT_RESPAWN_TYPE, "MHQ"] 
+	? (respawnType >= 0 && respawnType < 10): _name = (structDefs select (structsRespawn select respawnType)) select sdName; ctrlSetText [IDC_TEXT_RESPAWN_TYPE, _name] 
+
+	_pos = getPos respawnObject
+	_posInfo = _pos call funcCalcTownDirDistFromPos
+	_textPos = format ["%1 %2 %3", _posInfo select 0, _posInfo select 1, _posInfo select 2]
+	ctrlSetText [IDC_TEXT_RESPAWN_POS, _textPos]
+
+	_timeLeftDisplay = _timeLeft - (_timeLeft % 1)
+	_textStatus = format ["Respawning in %1 seconds", _timeLeftDisplay]
+	ctrlSetText [IDC_TEXT_MENU_STATUS, _textStatus]
+
+	? !(alive mhq): ctrlEnable [IDC_BTN_RESPAWN_MHQ, false]; ctrlSetText [IDC_TEXT_RESPAWN_MHQ, "DESTROYED"]; goto "UpdateStructs"
+	
+	ctrlEnable [IDC_BTN_RESPAWN_MHQ, true]
+	_pos = getPos mhq
+	_posInfo = _pos call funcCalcTownDirDistFromPos
+	_textPos = format ["%1 %2 %3", _posInfo select 0, _posInfo select 1, _posInfo select 2]
+	ctrlSetText [IDC_TEXT_RESPAWN_MHQ, _textPos]
+
+	#UpdateStructs
+
+	_index = 0
+	_count = count structsRespawn
+	#SetStructInfo
+		_structs = [playerSideIndex, structsRespawn select _index] call funcGetWorkingStructures
+		
+		? ( count (_structs - (_structLists select _index)) == 0 && count ((_structLists select _index) - _structs ) == 0 ): goto "CheckNextStructType"
+		
+		#StructsChanged
+			;player globalchat "StructsChanged"
+
+			; remember previously selected object
+			_selectedStruct = objNull
+			? (count (_structLists select _index) > 0): _selectedStruct = (_structLists select _index) select lbCurSel (IDC_CB_RESPAWN_STRUCT+_index)
+
+			_structLists set [_index, _structs]
+
+			? ((count _structs) == 0): goto "StructNotAvailable"
+
+			ctrlEnable [IDC_BTN_RESPAWN_STRUCT+_index, true]
+			_name = (structDefs select (structsRespawn select _index)) select sdName;
+			? (count _structs > 1): _name = format ["%1 (%2)", _name, count _structs]			
+			[IDD_RespawnMenu, IDC_BTN_RESPAWN_STRUCT+_index, _name] call funcSetButtonText
+
+			ctrlShow [IDC_CB_RESPAWN_STRUCT+_index, true]
+			lbClear (IDC_CB_RESPAWN_STRUCT+_index)
+			{ _pos = getPos _x; _posInfo = _pos call funcCalcTownDirDistFromPos; _textPos = format ["%1 %2 %3", _posInfo select 0, _posInfo select 1, _posInfo select 2]; lbAdd [IDC_CB_RESPAWN_STRUCT+_index, _textPos] } foreach _structs
+
+			; set previously selected object
+			_selectedIndex = [_selectedStruct, _structs] call funcGetIndex
+			if (_selectedIndex >= 0) then { lbSetCurSel [IDC_CB_RESPAWN_STRUCT+_index, _selectedIndex] } else { lbSetCurSel [IDC_CB_RESPAWN_STRUCT+_index, 0] }
+			
+			goto "CheckNextStructType"
+
+			#StructNotAvailable
+				ctrlEnable [IDC_BTN_RESPAWN_STRUCT+_index, false]
+				_name = (structDefs select (structsRespawn select _index)) select sdName;				
+                [IDD_RespawnMenu, IDC_BTN_RESPAWN_STRUCT+_index, _name] call funcSetButtonText
+
+				ctrlShow [IDC_CB_RESPAWN_STRUCT+_index, false]
+
+		#CheckNextStructType
+		_index = _index + 1
+		? (_index < _count): goto "SetStructInfo"
+
+
+	? (buttonPressedSetRespawnType != -1): goto "SetRespawn"
+
+	~_delay
+	
+	_timeLeft = playerRespawnTime
+	? (_timeLeft < 0) || (count(pvGameOver) > 0): closeDialog 0; Exit
+	? !(dialog):Exit
+
+	goto "Update"
+
+
+#SetRespawn
+	_type = buttonPressedSetRespawnType
+	buttonPressedSetRespawnType = -1
+
+	respawnType = _type
+
+	; check special value for mhq
+	? (_type == 10): respawnObject = mhq; goto "Update"
+
+	respawnObject = (_structLists select _type) select (lbCurSel (IDC_CB_RESPAWN_STRUCT+_type))
+
+	goto "Update"

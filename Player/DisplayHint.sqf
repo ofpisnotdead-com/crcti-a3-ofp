@@ -1,0 +1,40 @@
+_tip = ["Warning:\n\nAlthough playing CTI makes you cool, it's also highly addictive!"];
+_tip = _tip + ["Warning:\n\nDo NOT try to score with that short skirt civilian girl in town.\n\nShe might be the daughter of a local resistance leader, and he'll be pissed!"];
+_tip = _tip + ["Warning:\n\nGuns can kill people."];
+_tip = _tip + ["Game Tip:\n\nThat front end of your gun is the dangerous one!"];
+_tip = _tip + ["Game Tip:\n\nWhen prone, watch out for sharp little rocks.\n\nThey DO hurt."];
+_tip = _tip + ["Game Tip:\n\nThose little bushes are NOT bulletproof."];
+_tip = _tip + ["Kastenbier says:\n\nOnly dorks kill infantry with sabots!"];
+_tip = _tip + ["Kastenbier says:\n\nAI shooting at muzzle flashes at night or in fog is NOT cheating!"];
+_tip = _tip + ["Fun fact:\n\nReal tanks have no radar like that!"];
+_tip = _tip + ["In the News:\n\nThere are rumours that beer makes you dumb and illiterate.\n\nThat no sure be true can.\n\nUgh. Yeah.\n\n ... what?"];
+_tip = _tip + ["Advertisement:\n\nBIS will be happy to buy your improved, fast and perfect path finding algorithm you developed after complaining about those AI driving skills."];
+_tip = _tip + ["Consider:\n\nYou REALLY deserve undivided attention 24/7 by BIS staff after you bought their game for 20$ three years back."];
+_tip = _tip + ["Game Tip:\n\nTurn off that music, so you may hear your opponent. Like they hear you too."];
+_tip = _tip + ["Atencion! Las autoridades sanitarias advierten que el CTI perjudica seriamente la salud!"];
+_tip = _tip + ["Game Tip:\n\nSmoking weed while approaching your enemy gives away your position!"];
+_tip = _tip + ["Fun fact:\n\nYou mindlessly racing into town to impress your friends is NOT the AI's fault!"];
+_tip = _tip + ["Warning:\n\nDo NOT lick metallic parts of weapons, equipment, vehicles or comrades when temperatures are below freezing!"];
+_tip = _tip + ["Fun fact:\n\nDo NOT fall down stairs, ladders, slopes or out of driving vehicles!"];
+_tip = _tip + ["Game Tip:\n\nDo NOT point your scope at the sun with remaining eye!"];
+_tip = _tip + ["Fun fact:\n\nAt the end of the day, darkness is to be expected!"];
+_tip = _tip + ["Game Tip:\n\nAlways search dead bodies for pr0n, booze and smokes!"];
+_tip = _tip + ["Warning:\n\nFlashing or mooning in the open is always a bad idea. The subsequent laughter draws too much attention!"];
+_tip = _tip + ["Game Tip:\n\nAlways try to be better than your enemy. Seriously. This ain't no game man!!!"];
+_tip = _tip + ["Remember:\n\nThere are no mistakes.\nJust happy little accidents!\n\n(Bob Ross)"];
+_tip = _tip + ["Remember:\n\nThe mission is always right!"];
+_tip = _tip + ["Fun Fact:\n\nIt is annoying that some people think facts are fun."];
+_tip = _tip + ["Der ARMA-Minister warnt:\n\nLackkonsum kann ihre ARMA-Faehigkeiten beeintraechtigen!"];
+_tip = _tip + ["Disclaimer:\n\nAlthough fun, we do NOT endorse the technique of Teddybear Waterboarding to reduce CTI induced stress."];
+_tip = _tip + ["In soviet russia, the island captures YOU!"];
+_tip = _tip + ["Der fruehe Schweizer toetet das Hoernchen!"];
+_tip = _tip + ["'Kritik an mir als Comm ist mir ziemlich latte.'\n\nSven Tzu - The Art of CTI"];
+_tip = _tip + ["'Ehrgeiz ist wichtig, aber reiss dich doch mal ein bisschen zusammen waehrend der CTI.'\n\nSven Tzu - The Art of CTI"];
+_tip = _tip + ["'In der Ruhe liegt die Kraft mein Sohn.'\n\nSven Tzu - The Art of CTI"];
+_tip = _tip + ["Warning:\n\nDo NOT eat yellow snow!"];
+
+_t = _tip select(floor(random(count _tip)));
+
+sleep 60 + random(60);
+
+_nul = [_t,false, false, htTip,true] call funcHint;

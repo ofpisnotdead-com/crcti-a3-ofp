@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Project name="crCTI_KB"> 
+  <Key ID="STR_MISSION_NAME"> 
+    <Original>crCTI KB 1.19 r44 ArmA III</Original>  
+    <French>crCTI KB 1.19 r44 ArmA III</French>  
+    <Spanish>crCTI KB 1.19 r44 ArmA III</Spanish> 
+    <Italian>crCTI KB 1.19 r44 ArmA III</Italian>  
+    <Hungarian>crCTI KB 1.19 r44 ArmA III</Hungarian>  
+    <Polish>crCTI KB 1.19 r44 ArmA III</Polish>  
+    <Russian>crCTI KB 1.19 r44 ArmA III</Russian>  
+    <German>crCTI KB 1.19 r44 ArmA III</German>  
+    <Czech>crCTI KB 1.19 r44 ArmA III</Czech>  
+    <English>crCTI KB 1.19 r44 ArmA III</English>  
+    <Japanese>crCTI KB 1.19 r44 ArmA III</Japanese> 
+  </Key> 
+  <Key ID="STR_MISSION_NAME_COOP"> 
+    <Original>crCTI KB 1.19 r44 COOP ArmA III</Original>  
+    <French>crCTI KB 1.19 r44 COOP ArmA III</French>  
+    <Spanish>crCTI KB 1.19 r44 COOP ArmA III</Spanish> 
+    <Italian>crCTI KB 1.19 r44 COOP ArmA III</Italian>  
+    <Hungarian>crCTI KB 1.19 r44 COOP ArmA III</Hungarian>  
+    <Polish>crCTI KB 1.19 r44 COOP ArmA III</Polish>  
+    <Russian>crCTI KB 1.19 r44 COOP ArmA III</Russian>  
+    <German>crCTI KB 1.19 r44 COOP ArmA III</German>  
+    <Czech>crCTI KB 1.19 r44 COOP ArmA III</Czech>  
+    <English>crCTI KB 1.19 r44 COOP ArmA III</English>  
+    <Japanese>crCTI KB 1.19 r44 COOP ArmA III</Japanese> 
+  </Key> 
+  <Key ID="STRRESPAWN"> 
+    <Original>Respawn</Original>  
+    <French>Respawn</French>  
+    <Spanish>Respawn</Spanish> 
+    <Italian>Respawn</Italian>  
+    <Hungarian>Respawn</Hungarian>  
+    <Polish>Respawn</Polish>  
+    <Russian>Respawn</Russian>  
+    <German>Respawn</German>  
+    <Czech>Respawn</Czech>  
+    <English>Respawn</English>  
+    <Japanese>Respawn</Japanese> 
+  </Key> 
+</Project>

@@ -1,0 +1,210 @@
+respawn = 3;
+respawnDelay = 25;
+onLoadMission = $STR_MISSION_NAME;
+onLoadName = "crCTI KB";
+author = "Kastenbier";
+loadScreen = "Images\crctikblogo.paa";
+onLoadMissionTime=false;
+respawnDialog=false;
+scriptedPlayer=1;
+enableDebugConsole = 0;
+
+// game properties
+
+class Header
+{
+	gameType = CTI;
+	minPlayers = 1;
+	maxPlayers = 24;
+};
+
+// Parameters
+#include "Hpp\Parameters.hpp"
+
+// Dialogs
+#include "Hpp\Defines.hpp"
+#include "Hpp\RscPicture.hpp"
+#include "Hpp\RscListBox.hpp"
+#include "Hpp\RscCombo.hpp"
+#include "Hpp\RscButton.hpp"
+#include "Hpp\RscButtonLarge.hpp"
+#include "Hpp\RscMapControl.hpp"
+
+class Text
+{
+	type = CT_STATIC;
+	text = "";
+	IDC = IDC_UNDEFINED;
+	style = ST_LEFT;
+	LineSpacing = 1;
+	h = 0.04;w = 0.25;
+	ColorBackground[] = { 0, 0, 1, 0 };
+	ColorText[] = { 0.9, 0.9, 0.9, 1 };
+	font = "PuristaMedium";
+	soundSelect[] = { "", 0.1, 1 };
+	SizeEx = FontSize;
+};
+
+class Label: Text
+{
+	font = DEFAULTFONT;
+	colorText[] = COLOR_LABEL_TEXT;
+};
+
+class ActiveText
+{
+	idc = IDC_UNDEFINED;
+	type=CT_ACTIVETEXT;
+	style=ST_LEFT;
+	color[] = { 0, 0, 0, 1 };
+	colorActive[] = { 1, 1, 1, 1 };
+	font=DEFAULTFONT;
+	sizeEx=FontSize;
+	soundEnter[] = { "ui\ui_over", 0.2, 1 };
+	soundPush[] = { "", 0.2, 1 };
+	soundClick[] = { "ui\ui_ok", 0.2, 1 };
+	soundEscape[] = { "ui\ui_cc", 0.2, 1 };
+	default = false;
+};
+
+class TextField: Text
+{
+	type = CT_STATIC;
+	idc = IDC_UNDEFINED;
+	style = ST_LEFT+ST_MULTI;
+	colorText[] = { 0.9, 0.9, 0.9, 1 };
+	colorBackground[] = { 0, 0, 0, 0 };
+	font = DEFAULTFONT;
+	sizeEx = FontSize;
+	text = "HEJ";
+	lineSpacing = 1;
+	
+	w = 0.25;
+	h = 0.04;
+};
+
+class Title: Text
+{
+	font = DEFAULTFONT;
+	colorText[] = COLOR_TITLE_TEXT;
+	colorBackground[] = COLOR_TITLE_BG;
+	w=0.25;
+	h=0.05;
+	SizeEX = TitleFontSize;
+	style = ST_LEFT;
+};
+
+class Image: Text
+{
+	style = ST_PICTURE;
+	font = DEFAULTFONT;
+	colorText[] = { 1, 1, 1, 1 };
+	colorBackground[] = { 0.6, 0.6, 0.6, 1 };
+	SizeEX = 0.04;
+	text = "";
+};
+
+class DataText: Text
+{
+	font = DEFAULTFONT;
+	colorText[] = COLOR_DATA_TEXT;
+};
+
+class SliderVert
+{
+	type = CT_SLIDER;
+	idc = IDC_UNDEFINED;
+	style = 0;
+	color[] = { 1, 1, 1, 1 };
+	sizeEx = FontSize;
+	
+	w = 0.04;
+	h = 0.20;
+};
+
+class Menu
+{
+	idd = IDC_UNDEFINED;
+	movingEnable = true;
+	controlsBackground[] = { BackgroundWindow };
+	objects[] = { };
+};
+
+class BackgroundWindow: Title
+{
+	colorBackground[] = { 0.2, 0.2, 0.2, 0.9 };
+	idc = IDC_DEFAULT;
+	style = ST_LEFT;
+	x = 0.0;
+	y = 0.0;
+	w = 1.0;
+	h = 1.0;
+	text="";
+};
+
+class RscListBoxBG: Title
+{
+	idc = IDC_DEFAULT;
+	colorBackground[] = { 0.1, 0.1, 0.1, 0.9 };
+};
+
+//---------------------------------------------------------------------------------------------------
+#include "Hpp\RespawnMenu.hpp"
+#include "Hpp\DestructionMenu.hpp"
+#include "Hpp\FactoryMenu.hpp"
+#include "Hpp\BuildMenu.hpp"
+#include "Hpp\StatsDialog.hpp"
+#include "Hpp\EquipmentMenu.hpp"
+#include "Hpp\NearbyVehiclesDialog.hpp"
+#include "Hpp\LeaderBoardDialog.hpp"
+#include "Hpp\OptionsDialog.hpp"
+#include "Hpp\GameOverDialog.hpp"
+#include "Hpp\UnitCamDialog.hpp"
+#include "Hpp\SatCamDialog.hpp"
+#include "Hpp\CommandAIDialog.hpp"
+#include "Hpp\SetFlightAltitudeDialog.hpp"
+#include "Hpp\GameInfoDialog.hpp"
+#include "Hpp\DebugStatsDialog.hpp"
+#include "Hpp\CommsMenu.hpp"
+#include "Hpp\FactionsDialog.hpp"
+//---------------------------------------------------------------------------------------------------
+
+#include "Hpp\Sounds.hpp"
+
+class RscTitleText
+{
+	type=0;
+	idc=-1;
+	style=2;
+	colorBackground[] = { 0, 0, 0, 0 };
+	colorText[] = { 1, 1, 1, 1 };
+	font="PuristaMedium";
+	size=1;
+};
+
+class RscTitles
+{
+	titles[] = { };
+
+	class crctilogo
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=5;
+		fadein=0.5;
+		fadeout=0.5;
+		name="crctilogo";
+		controls[] = { "crctilogo" };
+
+		class crctilogo: RscTitleText
+		{
+			text="Images\crctikblogo.paa";
+			style=48;
+			sizeEx=0.15;
+			x=0.125;
+			y=0.0;
+			w=0.75;
+			h=1.0;
+		};
+	};
+};
