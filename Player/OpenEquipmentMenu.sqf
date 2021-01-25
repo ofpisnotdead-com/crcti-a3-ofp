@@ -777,18 +777,7 @@ _fPopulate = {
 };
 
 _fClear = {
-	removeAllPrimaryWeaponItems player;
-	removeAllHandgunItems player;
-	removeAllWeapons player;
-
-	{	player unassignItem _x}forEach (assignedItems player);
-	removeAllItems player;
-
-	removeBackPack player;
-	removeVest player;
-	removeHeadgear player;
-	removeUniform player;
-	removeGoggles player;
+        player call funcGearClear;
 };
 
 _fDefault = {

@@ -118,6 +118,12 @@ funcUpdateUnitArray = compile preProcessFileLineNumbers "Common\UpdateUnitArray.
 funcDespawnUnitArray = compile preProcessFileLineNumbers "Common\DespawnUnitArray.sqf";
 funcGetOrderDesc = compile preProcessFileLineNumbers "Common\GetOrderDesc.sqf";
 
+// common gear functions
+funcGearWestDefault = compile preProcessFileLineNumbers "Common\Gear\West\Default.sqf";
+funcGearEastDefault = compile preProcessFileLineNumbers "Common\Gear\East\Default.sqf";
+funcGearClear = compile preProcessFileLineNumbers "Common\Gear\Clear.sqf";
+funcGearAssign = compile preProcessFileLineNumbers "Common\Gear\Assign.sqf";
+
 funcNearestTerrainObjects = compile format["%1", ["[]", "nearestTerrainObjects _this"] select (THISISARMA3 && ((productVersion select 2) >= 154) && ((productVersion select 3) >= 132763)) ];
 funcHideObjectGlobal = compile format["%1", ["", "(_this select 0) hideObjectGlobal (_this select 1);"] select (THISISARMA3 && ((productVersion select 2) >= 112)) ];
 

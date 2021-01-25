@@ -65,19 +65,25 @@ cargoCarEast = [];
 cargoTruckWest = [];
 cargoTruckEast = [];
 
-weaponsRespawnPlayerWest = ["arifle_MX_Hamr_pointer_F", "hgun_P07_F", "launch_NLAW_F","Binocular", "NVGoggles"];
+weaponsRespawnPlayerWest = ["rhs_weap_m16a4_imod", "rhsusf_weap_m9", "rhs_weap_M136","Binocular", "NVGoggles"];
 weaponsRespawnPlayerEast = ["arifle_Katiba_ARCO_pointer_F", "hgun_Rook40_F", "launch_RPG32_F","Binocular", "NVGoggles"];
 
-magsRespawnPlayerWest = ["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer", "30Rnd_65x39_caseless_mag_Tracer", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "HandGrenade", "HandGrenade", "SmokeShell", "SmokeShellGreen", "SmokeShellBlue", "SmokeShellOrange", "Chemlight_green", "Chemlight_green","NLAW_F", "NLAW_F"];
+magsRespawnPlayerWest = [
+  "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag", "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+  "rhsusf_mag_15Rnd_9x19_JHP", "rhsusf_mag_15Rnd_9x19_JHP",
+  "rhs_mag_an_m8hc", "rhs_mag_m67", "rhs_mag_m67",
+  "rhs_m136_mag"
+];
+
 magsRespawnPlayerEast = ["30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green_mag_Tracer", "30Rnd_65x39_caseless_green_mag_Tracer", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "HandGrenade", "HandGrenade", "SmokeShell", "SmokeShellRed", "SmokeShellOrange", "SmokeShellYellow", "Chemlight_red", "Chemlight_red","RPG32_F","RPG32_F"];
 
 assignedItemsRespawnPlayerWest = ["ItemMap", "ItemCompass", "ItemWatch", _classRadioWest];
 assignedItemsRespawnPlayerEast = ["ItemMap", "ItemCompass", "ItemWatch", _classRadioEast];
 
-itemsRespawnPlayerWest = ["FirstAidKit","FirstAidKit"];
+itemsRespawnPlayerWest = ["FirstAidKit","FirstAidKit", "rhsusf_acc_anpeq15A", "rhsusf_acc_ACOG_USMC"];
 itemsRespawnPlayerEast = ["FirstAidKit","FirstAidKit"];
 
-backPackRespawnPlayerWest = "B_AssaultPack_khk";
+backPackRespawnPlayerWest = "rhsusf_falconii_coy";
 backPackRespawnPlayerEast = "B_AssaultPack_khk";
 
 if ( GPSAvailable > 0 ) then
@@ -103,11 +109,11 @@ backPacksRespawnAI = [backPackRespawnPlayerWest, backPackRespawnPlayerEast];
 
 // Default equipment for Equipment Menu "Clear"
 defaultWeapons = [["Binocular", "NVGoggles"],["Binocular", "NVGoggles"]];
-defaultUniform = ["U_B_CombatUniform_mcam_vest","U_O_CombatUniform_ocamo"];
-defaultVest = ["V_PlateCarrierGL_rgr", "V_TacVest_khk"];
-defaultBackPack = ["B_AssaultPack_khk","B_AssaultPack_khk"];
-defaultHeadgear = ["H_HelmetB_desert", "H_HelmetLeaderO_ocamo"];
-defaultGoggles = ["G_Combat", "G_Combat"];
+defaultUniform = ["rhs_uniform_FROG01_wd","rhs_uniform_vdv_emr"];
+defaultVest = ["rhsusf_mbav_light", "V_TacVest_khk"];
+defaultBackPack = ["rhsusf_falconii_coy","B_AssaultPack_khk"];
+defaultHeadgear = ["rhsusf_lwh_helmet_marpatwd", "H_HelmetLeaderO_ocamo"];
+defaultGoggles = ["rhs_googles_yellow", "G_Combat"];
 defaultAssignedItems = [["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", _classRadioWest],["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS",_classRadioEast]];
 defaultItems = [["FirstAidKit"],["FirstAidKit"]];
 
