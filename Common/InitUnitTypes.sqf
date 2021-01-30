@@ -893,37 +893,37 @@ if ( isServer ) then
 		_crewR = _type;
 		_type = _type + 1;
 
-		unitDefs set [_type, ["MHQ West", 50000, siWest, 10, "B_APC_Wheeled_01_cannon_F", stPrebuiltLight, [1, utCrewW,0], SQMHQ, ["InitMHQ.sqf"], ["InitMHQ.sqf"],[] ] ];
+		unitDefs set [_type, ["MHQ West", 50000, siWest, 10, "rhsgref_hidf_m113a3_unarmed", stPrebuiltLight, [1, utCrewW,0], SQMHQ, ["InitMHQ.sqf"], ["InitMHQ.sqf"],[] ] ];
 		utMHQWest = _type;
 		_type = _type + 1;
-		unitDefs set [_type, ["Fake MHQ West", 5000, siWest, 10, "B_APC_Wheeled_01_cannon_F", stLight, [1, utCrewW,0], SQAPC, [], [],[] ] ];
+		unitDefs set [_type, ["Fake MHQ West", 5000, siWest, 10, "rhsgref_hidf_m113a3_unarmed", stLight, [1, utCrewW,0], SQAPC, [], [],[] ] ];
 		FakeMHQWest = _type;
 		_type = _type + 1;
 
-		unitDefs set [_type, ["MHQ East", 50000, siEast, 10, "O_APC_Wheeled_02_rcws_F", stPrebuiltLight, [1, utCrewE,0], SQMHQ, ["InitMHQ.sqf"], ["InitMHQ.sqf"],[] ] ];
+		unitDefs set [_type, ["MHQ East", 50000, siEast, 10, "oksv_brdm2um", stPrebuiltLight, [1, utCrewE,0], SQMHQ, ["InitMHQ.sqf"], ["InitMHQ.sqf"],[] ] ];
 		utMHQEast = _type;
 		_type = _type + 1;
-		unitDefs set [_type, ["Fake MHQ East", 5000, siEast, 10, "O_APC_Wheeled_02_rcws_F", stLight, [1, utCrewE,0], SQAPC, [], [],[] ] ];
+		unitDefs set [_type, ["Fake MHQ East", 5000, siEast, 10, "oksv_brdm2um", stLight, [1, utCrewE,0], SQAPC, [], [],[] ] ];
 		FakeMHQEast = _type;
 		_type = _type + 1;
 
 		typesFakeMHQ = [[FakeMHQWest],[FakeMHQEast],[],[],[],[]];
 
-		unitDefs set [_type, ["Truck", 300, siWest, 30, "B_Truck_01_transport_F", stLight, [1, utCrewW,0], SQTruck, ["InitTruck.sqf"], ["InitTruck.sqf"],[] ] ];
+		unitDefs set [_type, ["Truck", 300, siWest, 30, "rhsusf_m1025_w", stLight, [1, utCrewW,0], SQTruck, ["InitTruck.sqf"], ["InitTruck.sqf"],[] ] ];
 		utTruckWest = _type;
 		groundTransport set [siWest, [utTruckWest] ];
 		_type = _type + 1;
 
-		unitDefs set [_type, ["Truck", 300, siEast, 30, "O_Truck_02_transport_F", stLight, [1, utCrewE,0], SQTruck, ["InitTruck.sqf"], ["InitTruck.sqf"],[] ] ];
+		unitDefs set [_type, ["Truck", 300, siEast, 30, "oksv_gazo", stLight, [1, utCrewE,0], SQTruck, ["InitTruck.sqf"], ["InitTruck.sqf"],[] ] ];
 		utTruckEast = _type;
 		groundTransport set [siEast, [utTruckEast] ];
 		_type = _type + 1;
 
-		unitDefs set [_type, ["Worker", costWorker, siWest, 7, "B_soldier_repair_F", stPrebuiltBarracks, [], sQSoldier, ["UpdateWorker.sqf"], [],[] ] ];
+		unitDefs set [_type, ["Worker", costWorker, siWest, 7, "C_man_p_beggar_F", stPrebuiltBarracks, [], sQSoldier, ["UpdateWorker.sqf"], [],[] ] ];
 		utWorkerW = _type;
 		_type = _type + 1;
 
-		unitDefs set [_type, ["Worker", costWorker, siEast,7, "O_soldier_repair_F", stPrebuiltBarracks, [], sQSoldier, ["UpdateWorker.sqf"], [],[] ] ];
+		unitDefs set [_type, ["Worker", costWorker, siEast,7, "C_man_p_beggar_F", stPrebuiltBarracks, [], sQSoldier, ["UpdateWorker.sqf"], [],[] ] ];
 		utWorkerE = _type;
 		_type = _type + 1;
 
